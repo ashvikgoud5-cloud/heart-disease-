@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ algorithm_name }}</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            padding: 30px;
+            margin: 0;
+        }
+        h1, h2, h3 {
+            color: #333;
+            font-weight: bold;
+        }
+        .button {
+            padding: 12px 25px;
+            color: white;
+            background-color: #42a5f5;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1.1em;
+            text-decoration: none;
+            text-align: center;
+        }
+        .button:hover {
+            background-color: #1e88e5;
+        }
+        .accuracy {
+            padding: 12px;
+            font-size: 1.5em;
+            color: #2e7d32;
+            background-color: #e8f5e9;
+            border-radius: 15px;
+            border: 3px solid #81c784;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .content-section {
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border: 1px solid #ddd;
+        }
+        .content-section h2 {
+            font-size: 1.8em;
+            color: #2196F3;
+            text-decoration: underline;
+        }
+        .content-section h3 {
+            font-size: 1.4em;
+            color: #444;
+            margin-top: 20px;
+        }
+        .content-section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .content-section ul {
+            margin-top: 10px;
+            font-size: 1.1em;
+        }
+        .content-section ul li {
+            margin-bottom: 8px;
+        }
+        .highlight {
+            color: #FF5722;
+            font-weight: bold;
+        }
+        .box {
+            background-color: #f0f4c3;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border: 2px solid #c8e6c9;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ algorithm_name }}BAT Algorithm</h1>
+    <p>This page provides an in-depth explanation and results for the powerful and efficient {{ algorithm_name }} algorithm. Explore the different aspects of the algorithm below, from its workings to its practical applications and performance metrics.</p>
+
+    <!-- Introduction Section -->
+    <div class="content-section">
+        <h2>Introduction to the Bat Algorithm</h2>
+        <p>The <span class="highlight">{{ algorithm_name }}</span> is a nature-inspired optimization algorithm based on the echolocation behavior of bats. Bats have the ability to use sound waves to navigate and locate prey, even in complete darkness. Similarly, this algorithm mimics their behavior to search for the optimal solution in complex optimization problems.</p>
+        <p>It is particularly useful in solving problems related to function optimization, engineering design, and machine learning tasks where the solution space is large and complex.</p>
+    </div>
+
+    <!-- Key Features Section -->
+    <div class="content-section">
+        <h2>Key Features of the Bat Algorithm</h2>
+        <p>The Bat Algorithm is designed to balance exploration (searching globally) and exploitation (fine-tuning local solutions). Some of its key features include:</p>
+        <ul>
+            <li><strong>Frequency Tuning:</strong> Bats adjust their frequency to adapt to different search regions and find optimal solutions.</li>
+            <li><strong>Echolocation:</strong> Using echolocation, bats are capable of "scanning" their environment and narrowing down their search towards the best solution.</li>
+            <li><strong>Movement Based on Fitness:</strong> The bats' movement and frequency depend on the quality (fitness) of the current solution, encouraging a progressive search toward better solutions.</li>
+            <li><strong>Dynamic Behavior:</strong> Bats' behavior changes dynamically, which enhances the algorithm's ability to explore the solution space more effectively.</li>
+        </ul>
+    </div>
+
+    <!-- Algorithm Workflow -->
+    <div class="content-section">
+        <h2>How Does the Bat Algorithm Work?</h2>
+        <p>The Bat Algorithm operates in a loop, with bats representing potential solutions that adjust their frequency, velocity, and position based on the evaluation of their fitness in the solution space. Here's a step-by-step breakdown:</p>
+        <ol>
+            <li><strong>Initialization:</strong> A set of bats is initialized with random positions and velocities in the search space.</li>
+            <li><strong>Fitness Evaluation:</strong> The fitness of each bat is evaluated based on the optimization problem.</li>
+            <li><strong>Movement and Frequency Adjustment:</strong> Each bat adjusts its frequency and position towards the best solution found so far.</li>
+            <li><strong>Exploration and Exploitation:</strong> Some bats explore the solution space, while others exploit the most promising areas, maintaining a balance between exploration and exploitation.</li>
+            <li><strong>Iteration:</strong> This process is repeated for a set number of iterations or until a convergence criterion is met.</li>
+        </ol>
+    </div>
+
+    <!-- Practical Applications Section -->
+    <div class="content-section">
+        <h2>Practical Applications of the Bat Algorithm</h2>
+        <p>The Bat Algorithm has been successfully applied in a variety of fields due to its efficiency and ability to solve complex optimization problems:</p>
+        <ul>
+            <li><strong>Engineering Design:</strong> Optimizing the design of structures, mechanical components, and electrical systems.</li>
+            <li><strong>Machine Learning:</strong> Feature selection, neural network training, and hyperparameter tuning.</li>
+            <li><strong>Control Systems:</strong> Optimization in the design and operation of control systems.</li>
+            <li><strong>Signal Processing:</strong> Image denoising and audio signal enhancement.</li>
+            <li><strong>Robotics:</strong> Path planning and multi-robot coordination.</li>
+        </ul>
+    </div>
+
+    <!-- Performance Metrics Section -->
+    <div class="content-section">
+        <h2>Performance Metrics of the Bat Algorithm</h2>
+        <p>The performance of the Bat Algorithm is often evaluated using various metrics to measure its effectiveness and efficiency:</p>
+        <ul>
+            <li><strong>Convergence Rate:</strong> How quickly the algorithm converges to the optimal solution.</li>
+            <li><strong>Accuracy:</strong> The closeness of the obtained solution to the actual optimal solution.</li>
+            <li><strong>Robustness:</strong> The ability of the algorithm to perform well on a variety of test cases and problem sets.</li>
+        </ul>
+    </div>
+
+    <!-- Display the accuracy -->
+    <div class="accuracy">
+        <strong>Accuracy: </strong>{{ accuracy }}%
+    </div><br><br>
+
+    <!-- Back to Dashboard Button -->
+    <a href="{{ url_for('dashboard') }}" class="button">Go Back to Dashboard</a>
+</body>
+</html>

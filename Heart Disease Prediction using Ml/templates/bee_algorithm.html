@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ algorithm_name }}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+        .button {
+            padding: 10px 20px;
+            color: white;
+            background-color: #42a5f5;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        .button:hover {
+            background-color: #1e88e5;
+        }
+        .accuracy {
+            padding: 12px;
+            font-size: 1.5em;
+            color: #2e7d32;
+            background-color: #e8f5e9;
+            border-radius: 15px;
+            border: 3px solid #81c784;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .content-section {
+            margin-top: 30px;
+            background-color: #fff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ddd;
+        }
+        .content-section h2 {
+            color: #2196F3;
+            font-size: 1.8em;
+        }
+        .content-section h3 {
+            color: #444;
+            margin-top: 15px;
+        }
+        .content-section p {
+            font-size: 1.1em;
+            color: #555;
+            line-height: 1.6;
+        }
+        .content-section ul {
+            margin-top: 10px;
+        }
+        .content-section ul li {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ algorithm_name }} Algorithm</h1>
+    <p>This page provides an overview and details for the {{ algorithm_name }} algorithm, a nature-inspired optimization algorithm that mimics the behavior of bees. Below, you’ll find more information on the algorithm's workings, its key features, and its practical applications.</p>
+
+    <!-- Bee Algorithm Description -->
+    <div class="content-section">
+        <h2>What is the Bee Algorithm?</h2>
+        <p>The Bee Algorithm (BA) is a population-based optimization algorithm inspired by the foraging behavior of bees. Bees search for nectar in flowers, and by mimicking this behavior, the Bee Algorithm aims to find optimal solutions to complex optimization problems.</p>
+        <p>Just like bees in nature, the algorithm uses a combination of exploration (searching for flowers) and exploitation (finding the best flowers) to locate the best solution in the search space. It has been successfully applied in fields such as engineering design, machine learning, and robotics.</p>
+    </div>
+
+    <!-- Key Features of the Bee Algorithm -->
+    <div class="content-section">
+        <h2>Key Features of the Bee Algorithm</h2>
+        <p>The Bee Algorithm works by simulating a population of bees exploring the solution space, with different roles for scouts, workers, and onlookers. Key features include:</p>
+        <ul>
+            <li><strong>Scout Bees:</strong> Randomly search the solution space to find potential new areas (solutions).</li>
+            <li><strong>Worker Bees:</strong> Exploit the best solutions found by the scout bees to improve upon them.</li>
+            <li><strong>Onlooker Bees:</strong> Choose solutions from a pool of the best solutions found, based on a probability distribution.</li>
+            <li><strong>Global and Local Search Balance:</strong> The algorithm combines global exploration with local exploitation to avoid premature convergence.</li>
+        </ul>
+    </div>
+
+    <!-- Bee Algorithm Workflow -->
+    <div class="content-section">
+        <h2>How Does the Bee Algorithm Work?</h2>
+        <p>The Bee Algorithm operates in several key steps, with the population of bees representing candidate solutions. Here’s an overview of the algorithm's process:</p>
+        <ol>
+            <li><strong>Initialization:</strong> The algorithm initializes a population of scout bees with random positions in the search space.</li>
+            <li><strong>Search Phase:</strong> The scout bees search the solution space and identify potential areas for exploitation.</li>
+            <li><strong>Exploitation Phase:</strong> The worker bees move towards the best solutions and refine them to improve their quality.</li>
+            <li><strong>Onlooker Bees:</strong> Onlooker bees choose the best solution based on the probability distribution from the population of worker bees.</li>
+            <li><strong>Iteration:</strong> The process is repeated until a stopping criterion is met (e.g., maximum iterations or convergence to an optimal solution).</li>
+        </ol>
+    </div>
+
+    <!-- Practical Applications of the Bee Algorithm -->
+    <div class="content-section">
+        <h2>Practical Applications of the Bee Algorithm</h2>
+        <p>The Bee Algorithm is versatile and has been successfully used in various real-world applications:</p>
+        <ul>
+            <li><strong>Engineering Design:</strong> Optimization of mechanical, electrical, and civil engineering designs.</li>
+            <li><strong>Machine Learning:</strong> Feature selection, model training, and optimization of hyperparameters.</li>
+            <li><strong>Robotics:</strong> Path planning and multi-robot coordination.</li>
+            <li><strong>Image Processing:</strong> Noise reduction and image segmentation.</li>
+            <li><strong>Control Systems:</strong> Tuning of control systems and optimization of process parameters.</li>
+        </ul>
+    </div>
+
+    <!-- Performance of the Bee Algorithm -->
+    <div class="content-section">
+        <h2>Performance of the Bee Algorithm</h2>
+        <p>The Bee Algorithm has shown strong performance in many optimization tasks. Its ability to balance exploration and exploitation ensures that it can find high-quality solutions in a reasonable amount of time. The algorithm is especially well-suited for complex, multi-dimensional, and multi-modal optimization problems.</p>
+        <ul>
+            <li><strong>Convergence Speed:</strong> The Bee Algorithm typically converges quickly to good solutions, making it suitable for real-time applications.</li>
+            <li><strong>Flexibility:</strong> It can handle a wide range of optimization problems, from continuous to discrete domains.</li>
+            <li><strong>Robustness:</strong> The algorithm remains effective even when faced with noisy or incomplete data.</li>
+        </ul>
+    </div>
+
+    <!-- Display the accuracy -->
+    <div class="accuracy">
+        <strong>Accuracy: </strong>{{ accuracy }}%
+    </div><br><br>
+
+    <!-- Back to Dashboard Button -->
+    <a href="{{ url_for('dashboard') }}" class="button">Go Back to Dashboard</a>
+</body>
+</html>
